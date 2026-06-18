@@ -1,14 +1,52 @@
-<div align="center">
-# 🌌 C-SAI // ARCHITECTURE PORTFOLIO
-*A premium, high-end glassmorphic portfolio interface engineered to showcase technical excellence, projects, and academic performance.*[span_0](start_span)[span_0](end_span)
-[![Tech](https://img.shields.io/badge/Frontend-HTML5_/_CSS3_/_JS-orange.svg?style=for-the-badge)](#)
-[![Design](https://img.shields.io/badge/Theme-Glassmorphism-blue.svg?style=for-the-badge)](#)
-</div>
+# 🎨 CSAI Paint (Cista Sketcher)
+
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white)
+![Turtle Graphics](https://img.shields.io/badge/Turtle-Graphics-green?style=for-the-badge)
+
+An interactive drawing application built with Python Turtle Graphics that allows users to create sketches using precise keyboard controls.
+
 ---
-## ✦ Overview
-This repository contains the core frontend engine for the official portfolio of **Sisay Walellign (C-SAI)**[span_1](start_span)[span_1](end_span). Designed with a striking web-spider motif and minimalist dark aesthetics, the platform delivers an editorial showcase of full-stack expertise, computer science principles, and a foundational passion for astronomy[span_2](start_span)[span_2](end_span).
-## ✦ Design Architecture & Features
-* **Glassmorphic UI Engine:** Utilizes visual layouts engineered through translucent navigation docks (`glass-nav`) and content boards (`glass-card`)[span_3](start_span)[span_3](end_span).
+
+## 📖 About
+
+**CSAI Paint** (Cista Sketcher) is a minimalist drawing application created using Python's native `turtle` graphics framework. The engine allows you to completely customize the drawing cursor, switch through a vibrant color matrix, modify the background canvas, and execute fluid sketches by routing directional inputs directly through the keyboard.
+
+This project serves as an excellent architecture model for event-driven programming, input polling, and coordinate-based GUI mechanics in Python.
+
+---
+
+## ✨ Features
+
+- 🎨 **Multi-Color Palette Matrix:** Access to a wide array of premium colors instantly.
+- 🖌️ **Custom Rigging Shapes:** Dynamic transformation of the drawing cursor.
+- 🌈 **Canvas Customization:** On-the-fly modifications to the background environment.
+- ⌨️ **Low-Latency Controls:** Snappy keyboard-controlled rendering loops.
+- 🔄 **Vector Rotation:** Complex angle alignments (45° and 135° vectors).
+- ❓ **On-Demand Help Desk:** Built-in interactive help window accessible via click.
+- 🐢 **Lightweight Engine:** Powered entirely by Python standard libraries.
+
+---
+
+## 🚀 Getting Started
+
+### Requirements
+
+- Python 3.x
+
+The application utilizes the following core modules:
+- `turtle`
+- `tkinter`
+
+*Note: Both modules come pre-installed with standard Python distributions.*
+
+---
+
+## ▶️ Run the Application
+
+Clone the target repository directly from GitHub:
+
+```bash
+git clone [https://github.com/Sisay-walellign47/csai_paint.git](https://github.com/Sisay-walellign47/csai_paint.git)
 * **Premium Typography Matrix:** Integrated with high-end font displays including **Poppins** for clean, scannable data layouts and **Galada** for expressive typography elements[span_4](start_span)[span_4](end_span).
 * **Asynchronous Telemetry Links:** Outfitted with vectorized iconography via *Material Icons* and *Font Awesome* for sleek navigation tracking[span_5](start_span)[span_5](end_span).
 * **Academic Dashboard:** A dedicated space tracking high-performance metrics across technical core principles, complex programming algorithms, and interdisciplinary data sets[span_6](start_span)[span_6](end_span).
