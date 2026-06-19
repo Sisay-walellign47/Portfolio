@@ -5,8 +5,9 @@
     --accent-hover: #008ecc;
     --text-light: #f8fafc;
     --text-muted: #cbd5e1;
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --card-bg: #1e293b;
 }
 
 * {
@@ -38,8 +39,8 @@ a:hover { color: var(--accent-blue); }
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--glass-border);
     z-index: 1000;
 }
@@ -68,8 +69,8 @@ a:hover { color: var(--accent-blue); }
 }
 
 .nav-links a {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 600;
     font-family: monospace;
     text-transform: uppercase;
 }
@@ -82,7 +83,7 @@ a:hover { color: var(--accent-blue); }
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 120px 5% 50px;
+    padding: 140px 5% 50px;
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
@@ -96,26 +97,13 @@ a:hover { color: var(--accent-blue); }
 }
 
 .profile-pic {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid var(--accent-blue);
-    box-shadow: 0 0 30px rgba(0, 191, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.2);
     animation: float 6s ease-in-out infinite;
-}
-
-.badge {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background: var(--accent-blue);
-    color: var(--bg-dark);
-    font-family: 'Galada', cursive;
-    font-size: 20px;
-    padding: 5px 20px;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .hero-content {
@@ -126,17 +114,17 @@ a:hover { color: var(--accent-blue); }
 }
 
 .intro {
-    font-size: 45px;
+    font-size: 40px;
     background: linear-gradient(135deg, var(--accent-blue), #00eeff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .tagline {
-    font-size: 18px;
-    color: var(--text-muted);
-    font-weight: 300;
-    letter-spacing: 1px;
+    font-size: 20px;
+    color: var(--accent-blue);
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 /* --- Glassmorphism Cards --- */
@@ -144,9 +132,9 @@ a:hover { color: var(--accent-blue); }
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
-    border-radius: 20px;
+    border-radius: 16px;
     padding: 30px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary {
@@ -168,35 +156,187 @@ a:hover { color: var(--accent-blue); }
     box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);
 }
 
-/* --- Arrow Animation --- */
-.scroll-indicator {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-#arrow {
-    color: var(--accent-blue);
-    font-size: 50px;
-    animation: bounce 2s infinite;
-}
-
-/* --- Academic Section --- */
-.academic {
+/* --- Skills Section --- */
+.skills-section {
     max-width: 1000px;
-    margin: 0 auto 100px;
+    margin: 60px auto;
     padding: 0 5%;
 }
 
 .section-title {
     text-align: center;
-    font-size: 40px;
+    font-size: 36px;
     color: var(--text-light);
     margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.skills-category {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.skills-category h3 {
+    color: var(--accent-blue);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.badge-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-badge {
+    background: rgba(0, 191, 255, 0.1);
+    color: var(--text-light);
+    border: 1px solid rgba(0, 191, 255, 0.2);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-family: monospace;
+}
+
+/* --- Projects Grid UI --- */
+.projects-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 5%;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 191, 255, 0.15);
+}
+
+.project-image-wrapper {
+    width: 100%;
+    height: 180px;
+    background: #111827;
+    overflow: hidden;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.project-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+}
+
+.project-card:hover .project-screenshot {
+    opacity: 1;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-tech {
+    font-size: 11px;
+    color: var(--accent-blue);
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.project-info h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 20px;
+    height: 60px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid var(--accent-blue);
+    color: var(--text-light);
+    font-size: 13px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background: var(--accent-blue);
+    color: var(--bg-dark);
+}
+
+/* --- Certifications Section --- */
+.certifications-section {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 5%;
+}
+
+.cert-list {
+    list-style: none;
+}
+
+.cert-list li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.cert-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.cert-list strong {
+    color: var(--accent-blue);
+    font-size: 15px;
+}
+
+.cert-meta {
+    color: var(--text-muted);
+    font-size: 14px;
 }
 
 /* --- Footer --- */
 footer {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     border-top: 1px solid var(--glass-border);
     padding: 50px 5% 20px;
 }
@@ -210,29 +350,12 @@ footer {
     margin: 0 auto;
 }
 
-.footer-brand {
-    text-align: center;
-}
-
-.footer-brand img {
-    width: 80px;
-    margin-bottom: 10px;
-}
-
+.footer-brand { text-align: center; }
+.footer-brand img { width: 80px; margin-bottom: 10px; }
 .footer-links ul { list-style: none; }
 .footer-links li { margin-bottom: 10px; }
-
-.footer-social {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.footer-social i {
-    font-size: 24px;
-    color: var(--accent-blue);
-    width: 30px;
-}
+.footer-social { display: flex; flex-direction: column; gap: 15px; }
+.footer-social i { font-size: 24px; color: var(--accent-blue); width: 30px; }
 
 .footer-bottom {
     text-align: center;
@@ -240,46 +363,40 @@ footer {
     padding-top: 20px;
     border-top: 1px solid var(--glass-border);
     color: var(--text-muted);
+    font-size: 13px;
 }
 
-/* --- Keyframes --- */
+/* --- Keyframes Animation --- */
 @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    50% { transform: translateY(-15px); }
     100% { transform: translateY(0px); }
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-20px); }
-    60% { transform: translateY(-10px); }
-}
-
-/* --- MOBILE RESPONSIVENESS (The Magic) --- */
+/* --- Responsive Layout Breakpoints --- */
 @media screen and (max-width: 900px) {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding-top: 150px;
+        padding-top: 160px;
+        gap: 30px;
     }
-    .intro { font-size: 35px; }
+    .intro { font-size: 34px; }
+    .skills-container { grid-template-columns: 1fr; }
 }
 
 @media screen and (max-width: 768px) {
     .glass-nav {
         flex-direction: column;
         padding: 15px;
-        gap: 15px;
+        gap: 12px;
     }
     .nav-links {
         width: 100%;
         justify-content: center;
-        gap: 15px;
+        gap: 20px;
     }
-    .profile-pic {
-        width: 250px;
-        height: 250px;
-    }
+    .profile-pic { width: 220px; height: 220px; }
     .footer-content {
         flex-direction: column;
         align-items: center;
